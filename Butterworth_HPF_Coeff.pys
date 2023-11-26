@@ -1,0 +1,14 @@
+from scipy.signal import butter
+
+# Define the order of the filter and the cut-off frequency
+order = 3  # For example, a 3rd order filter
+cutoff_frequency = 1000  # Example cut-off frequency in Hz
+
+# Sample rate (frequency)
+fs = 48000  # Example sample rate in Hz
+
+# Generating the Butterworth high-pass filter coefficients
+b, a = butter(order, cutoff_frequency, fs=fs, btype='highpass', output='ba')
+
+b, a
+
